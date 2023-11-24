@@ -7,7 +7,7 @@ using namespace std;
 
 class Song {
 private:
-    int songId;
+    int id;
     string title;
     string artist;
     string album;
@@ -18,11 +18,15 @@ private:
     float duration;
 
 public:
+    Song();
     Song(int id, const string& songTitle, const string& artistName,
          const string& albumName, const string& songGenre,
          const string& author, const string& lang,
          int year, float songDuration);
 
+    Song(const Song& otherSong);
+
+    ~Song();
     void displayDetails();
 };
 
